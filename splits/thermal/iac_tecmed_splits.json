@@ -1,0 +1,32 @@
+{
+  "train": [
+    "ADM001",
+    "CTA002",
+    "CTA003",
+    "ESP002",
+    "ESP006",
+    "ESP008",
+    "ESP009",
+    "ESP010",
+    "EST004",
+    "MED001",
+    "NRT001",
+    "NRT002",
+    "NRT004"
+  ],
+  "val": [
+    "ESP001",
+    "MED002",
+    "MED006"
+  ],
+  "test": [
+    "ESP003",
+    "EXT003",
+    "NRT003"
+  ],
+  "summary": {
+    "train_count": 13,
+    "val_count": 3,
+    "test_count": 3
+  }
+}

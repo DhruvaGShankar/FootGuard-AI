@@ -1,0 +1,38 @@
+# FootGuard AI - Local ML Research Studio Configuration
+app:
+  name: "FootGuard AI — Local ML Research Studio"
+  version: "2.0.0"
+  research_disclaimer: >
+    RESEARCH USE ONLY: FootGuard AI is an experimental ML research prototype.
+    It does NOT detect diabetic foot ulcers, predict future ulceration, diagnose neuropathy,
+    predict wound healing time, or provide clinical medical advice.
+
+paths:
+  raw_real_dir: "raw"
+  processed_dir: "processed"
+  splits_dir: "splits"
+  checkpoints_dir: "checkpoints"
+  synthetic_csv: "footguard_synthetic_paired_readings.csv"
+  data_synthetic_dir: "data/synthetic"
+  data_real_dir: "data/real"
+  data_processed_dir: "data/processed"
+  experiments_configs_dir: "experiments/configs"
+  experiments_results_dir: "experiments/results"
+  experiments_logs_dir: "experiments/logs"
+  legacy_experiments_dir: "experiments"
+  evaluation_dir: "evaluation"
+
+training_defaults:
+  seed: 42
+  epochs: 10
+  batch_size: 16
+  learning_rate: 0.001
+  weight_decay: 0.0001
+  patience: 5
+  device: "cpu"
+
+synthetic_loader:
+  chunk_size: 50000
+  default_sample_rows: 500
+  max_preview_rows: 1000
+

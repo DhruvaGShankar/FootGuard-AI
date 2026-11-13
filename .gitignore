@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+
+# Streamlit
+.streamlit/secrets.toml
+
+# Training outputs
+experiments/logs/
+experiments/results/
+checkpoints/synthetic_experiments/
+
+# Large datasets
+data/
+raw/
+processed/
+footguard_synthetic_paired_readings.csv
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/

@@ -1,0 +1,41 @@
+experiment_id: syn_thermal_2d_cnn_20261113_165000
+dataset_name: sim_multimodal_v1
+dataset_origin: synthetic
+model_name: thermal_2d_cnn
+hyperparameters:
+  epochs: 5
+  batch_size: 8
+  learning_rate: 0.001
+  seed: 42
+  alpha: 1.0
+training_configuration:
+  seed: 42
+  target_column: latent_thermal_regime
+  feature_columns:
+  - thermal_tensors(3,160,80)
+  generator_config:
+    dataset_name: sim_multimodal_v1
+    num_sessions: 12
+    steps_per_session: 60
+    sampling_hz: 10.0
+    thermal_base_c: 30.8
+    thermal_spread_c: 1.2
+    pressure_load_scale_n: 400.0
+    sensor_noise_std: 0.05
+    measurement_variation: 0.15
+    seed: 42
+  train_sessions:
+  - SIM-P001
+  - SIM-P008
+  - SIM-P007
+  - SIM-P010
+  - SIM-P012
+  - SIM-P004
+  - SIM-P006
+  - SIM-P003
+  val_sessions:
+  - SIM-P005
+  - SIM-P011
+  test_sessions:
+  - SIM-P002
+  - SIM-P009
